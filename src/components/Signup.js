@@ -25,7 +25,7 @@ export default function Signup() {
         //   }
 
         const { name, username, email, phone, profession, password } = credentials;
-        const response = await fetch("http://localhost:5000/signup", {
+        const response = await fetch("https://neuus.herokuapp.com/signup", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

@@ -2,7 +2,7 @@ import codeContext from "./codeContext";
 import { useState } from "react";
 
 const Codestate = (props) => {
-  const host = "http://localhost:5000"
+  const host = "https://neuus.herokuapp.com"
   const codesInitial = []
   const [codes, setCodes] = useState(codesInitial)
   const [json, setJson] = useState(codesInitial)

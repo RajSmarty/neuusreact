@@ -24,7 +24,7 @@ export default function Login() {
         //   loaderBtn.style.backgroundColor = "rgb(52 176 223)"
         //   setSpinner(<Spinner />);
         // }
-        const response = await fetch("http://localhost:5000/login", {
+        const response = await fetch("https://neuus.herokuapp.com/login", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
