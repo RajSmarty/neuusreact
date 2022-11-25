@@ -201,8 +201,15 @@
   display: inline-block;
 }
 
+.categoryUnderline{
+  
+  border-bottom: 1px solid rgb(149 146 159 / 32%);
+}
 
-
+.dots{
+  
+  border-bottom: 1px solid #00b0e6;
+}
 
 
 

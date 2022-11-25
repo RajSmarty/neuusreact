@@ -7,7 +7,7 @@ import AccessDenied from './AccessDenied';
 import searchIcon from "../images/search.png"
 import { Link, useHistory } from 'react-router-dom';
 
-const News = (props) => {
+const Trending = (props) => {
 
     let history = useHistory();
 
@@ -57,7 +57,7 @@ const News = (props) => {
     // }
 
     useEffect(() => {
-        if (props.category === "general") {
+        if (props.category === "technology") {
             document.title = `${capitalizeFirstLetter("Trending")} - neuus`;
             updateNews();
             // eslint-disable-next-line
@@ -134,11 +134,11 @@ const News = (props) => {
 
                                 <div style={{ marginTop: "2.5em", display: "flex" }}>
                                     
-                                    <p className='text-center categoryUnderline' style={{ width: "50%", marginTop: "8px", fontSize: "1.5rem", fontWeight: "bold", cursor: "pointer", borderBottom:"2px solid #00b0e6" }}>
+                                    <p className='text-center categoryUnderline' style={{ width: "50%", marginTop: "8px", fontSize: "1.5rem", fontWeight: "bold", cursor: "pointer"}}>
                                     <Link to="/news" style={{color:"black"}}><p style={{ borderRight: "1px solid rgb(149 146 159 / 32%)" }}> My neuus</p></Link>
                                     </p>
                                     
-                                    <p className='text-center categoryUnderline' style={{ width: "50%", marginTop: "8px", fontSize: "1.5rem", fontWeight: "bold", cursor: "pointer", }}>
+                                    <p className='text-center categoryUnderline' style={{ width: "50%", marginTop: "8px", fontSize: "1.5rem", fontWeight: "bold", cursor: "pointer", borderBottom:"2px solid #00b0e6"  }}>
                                     <Link to="/trending" style={{color:"black"}}><p style={{ borderRight: "1px solid rgb(149 146 159 / 32%)" }}>Trending</p></Link>
                                     </p>
                                     
@@ -205,16 +205,16 @@ const News = (props) => {
 }
 
 
-News.defaultProps = {
+Trending.defaultProps = {
     country: 'in',
     pageSize: 8,
     category: 'general',
 }
 
-News.propTypes = {
+Trending.propTypes = {
     country: PropTypes.string,
     pageSize: PropTypes.number,
     category: PropTypes.string,
 }
 
-export default News
+export default Trending

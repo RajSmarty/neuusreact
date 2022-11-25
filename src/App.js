@@ -14,6 +14,8 @@ import ProfileDesc from './components/ProfileDesc';
 import EditProfile from './components/EditProfile';
 import Codestate from './context/codes/Codestate';
 import ReaderPage from './components/ReaderPage';
+import Professional from './components/Professional';
+import Trending from './components/Trending';
 // import Newsz from './components/Newsz';
 // import Selectnews from './components/Seclectnews';
 
@@ -22,6 +24,7 @@ const App = () => {
   const apiKey = "03e4afe4a0dd4e6ba5caa195f378a415"
   
   const pageSize = 6;
+  const pageSizeDup = 30;
   const pageSource = "Moneycontrol"
   const [progress, setProgress] = useState(0)
 
@@ -37,8 +40,12 @@ const App = () => {
             />
 
             <Switch>
-              <Route exact path="/news"><News setProgress={setProgress} apiKey={apiKey} pageSource={pageSource} key="general" pageSize={pageSize} country="in" category="general" /></Route>
-              <Route exact path="/reader"><ReaderPage setProgress={setProgress} apiKey={apiKey} pageSource={pageSource} key="general" pageSize={pageSize} country="in" category="general" /></Route>
+              <Route exact path="/news"><News setProgress={setProgress} apiKey={apiKey} pageSource={pageSource} key="general" pageSize={pageSize} country="gb" category="general" /></Route>
+              <Route exact path="/pro"><Professional setProgress={setProgress} apiKey={apiKey} pageSource={pageSource} key="Professional" pageSize={pageSizeDup} country="gb" category="health" /></Route>
+              <Route exact path="/trending"><Trending setProgress={setProgress} apiKey={apiKey} pageSource={pageSource} key="Trending" pageSize={pageSize} country="gb" category="technology" /></Route>
+
+              
+              <Route exact path="/reader"><ReaderPage setProgress={setProgress} apiKey={apiKey} pageSource={pageSource} key="general" pageSize={pageSize} country="gb" category="general" /></Route>
               {/* <Route exact path="/newz"><Newsz setProgress={setProgress} apiKeyz={apiKeyz} pageSource={pageSource} key="general" pageSize={pageSize} country="us" category="general" /></Route> */}
               
               {/* <Route exact path="/newsb"><Selectnews setProgress={setProgress} /></Route> */}

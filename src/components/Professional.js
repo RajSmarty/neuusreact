@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import NewsItem from './NewsItem'
+import NewsItemPro from './NewsItemPro'
 import Spinner from './Spinner';
 import PropTypes from 'prop-types'
 import InfiniteScroll from "react-infinite-scroll-component";
@@ -7,7 +7,7 @@ import AccessDenied from './AccessDenied';
 import searchIcon from "../images/search.png"
 import { Link, useHistory } from 'react-router-dom';
 
-const News = (props) => {
+const Professional = (props) => {
 
     let history = useHistory();
 
@@ -57,8 +57,8 @@ const News = (props) => {
     // }
 
     useEffect(() => {
-        if (props.category === "general") {
-            document.title = `${capitalizeFirstLetter("Trending")} - neuus`;
+        if (props.category === "health") {
+            document.title = `${capitalizeFirstLetter("Professional")} - neuus`;
             updateNews();
             // eslint-disable-next-line
 
@@ -134,7 +134,7 @@ const News = (props) => {
 
                                 <div style={{ marginTop: "2.5em", display: "flex" }}>
                                     
-                                    <p className='text-center categoryUnderline' style={{ width: "50%", marginTop: "8px", fontSize: "1.5rem", fontWeight: "bold", cursor: "pointer", borderBottom:"2px solid #00b0e6" }}>
+                                    <p className='text-center categoryUnderline' style={{ width: "50%", marginTop: "8px", fontSize: "1.5rem", fontWeight: "bold", cursor: "pointer", }}>
                                     <Link to="/news" style={{color:"black"}}><p style={{ borderRight: "1px solid rgb(149 146 159 / 32%)" }}> My neuus</p></Link>
                                     </p>
                                     
@@ -142,7 +142,7 @@ const News = (props) => {
                                     <Link to="/trending" style={{color:"black"}}><p style={{ borderRight: "1px solid rgb(149 146 159 / 32%)" }}>Trending</p></Link>
                                     </p>
                                     
-                                    <p className='text-center categoryUnderline' style={{ width: "50%", marginTop: "8px", fontSize: "1.5rem", fontWeight: "bold", cursor: "pointer", }}>
+                                    <p className='text-center categoryUnderline' style={{ width: "50%", marginTop: "8px", fontSize: "1.5rem", fontWeight: "bold", cursor: "pointer",borderBottom:"2px solid #00b0e6"  }}>
                                     <Link to="/pro" style={{color:"black"}}><p>Professional</p></Link>
                                     </p>
                                 </div>
@@ -161,7 +161,7 @@ const News = (props) => {
                                             <div className="row">
                                                 {articles.map((element) => {
                                                     return <div className="col-md-4" key={element.url}>
-                                                        <NewsItem title={element.title ? element.title : ""} description={element.description ? element.description : ""} imageUrl={element.urlToImage} newsUrl={element.url} author={element.author} date={element.publishedAt} source={element.source.name} />
+                                                        <NewsItemPro title={element.title ? element.title : ""} description={element.description ? element.description : ""} imageUrl={element.urlToImage} newsUrl={element.url} author={element.author} date={element.publishedAt} source={element.source.name} />
                                                     </div>
                                                 })}
                                             </div>
@@ -205,16 +205,16 @@ const News = (props) => {
 }
 
 
-News.defaultProps = {
+Professional.defaultProps = {
     country: 'in',
     pageSize: 8,
     category: 'general',
 }
 
-News.propTypes = {
+Professional.propTypes = {
     country: PropTypes.string,
     pageSize: PropTypes.number,
     category: PropTypes.string,
 }
 
-export default News
+export default Professional
