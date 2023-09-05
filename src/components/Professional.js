@@ -143,7 +143,7 @@ const Professional = (props) => {
                                     </p>
                                     
                                     <p className='text-center categoryUnderline' style={{ width: "50%", marginTop: "8px", fontSize: "1.5rem", fontWeight: "bold", cursor: "pointer",borderBottom:"2px solid #00b0e6"  }}>
-                                    <Link to="/pro" style={{color:"black"}}><p>Professional</p></Link>
+                                    <Link to="/pro" style={{color:"#f0054b"}}><p>Professional</p></Link>
                                     </p>
                                 </div>
                                 {/* <hr /> */}

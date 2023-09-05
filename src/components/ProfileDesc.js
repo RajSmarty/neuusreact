@@ -73,7 +73,7 @@ export default function ProfileDesc() {
                         <div className="col-md-6">
                             <div className="profile-head">
                                 <h5>
-                                    Nishikant Mishra
+                                    Raj Mishra
                                 </h5>
                                 <h6>
                                     (Bio/Name-Alias Section)

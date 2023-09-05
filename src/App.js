@@ -41,8 +41,8 @@ const App = () => {
 
             <Switch>
               <Route exact path="/news"><News setProgress={setProgress} apiKey={apiKey} pageSource={pageSource} key="general" pageSize={pageSize} country="gb" category="general" /></Route>
-              <Route exact path="/pro"><Professional setProgress={setProgress} apiKey={apiKey} pageSource={pageSource} key="Professional" pageSize={pageSizeDup} country="gb" category="health" /></Route>
-              <Route exact path="/trending"><Trending setProgress={setProgress} apiKey={apiKey} pageSource={pageSource} key="Trending" pageSize={pageSize} country="gb" category="technology" /></Route>
+              <Route exact path="/pro"><Professional setProgress={setProgress} apiKey={apiKey} pageSource={pageSource} key="Professional" pageSize={pageSizeDup} country="gb" category="technology" /></Route>
+              <Route exact path="/trending"><Trending setProgress={setProgress} apiKey={apiKey} pageSource={pageSource} key="Trending" pageSize={pageSize} country="gb" category="health" /></Route>
 
               
               <Route exact path="/reader"><ReaderPage setProgress={setProgress} apiKey={apiKey} pageSource={pageSource} key="general" pageSize={pageSize} country="gb" category="general" /></Route>

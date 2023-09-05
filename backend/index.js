@@ -25,6 +25,8 @@ app.use("/api/empuserformh", require('./routes/empuserformh'))
 app.use("/api/ns", require('./routes/newssource'))
 app.use("/api/nc", require('./routes/newscategory'))
 app.use("/api/nt", require('./routes/newstype'))
+// app.use("/api/ntUpdate", require('./routes/newsGen'))
+
 
 app.use('/api/items', require('./routes/items'))
 

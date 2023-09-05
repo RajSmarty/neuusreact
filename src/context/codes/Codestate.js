@@ -2,7 +2,7 @@ import codeContext from "./codeContext";
 import { useState } from "react";
 
 const Codestate = (props) => {
-  const host = "https://neuus.herokuapp.com"
+  const host = "http://localhost:5000"
   const codesInitial = []
   const [codes, setCodes] = useState(codesInitial)
   const [json, setJson] = useState(codesInitial)
@@ -43,7 +43,7 @@ const Codestate = (props) => {
     setCodes(json)
   }
 
-  
+
 
 
   const getImages = async () => {

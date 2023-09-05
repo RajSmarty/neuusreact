@@ -25,7 +25,7 @@ export default function Signup() {
         //   }
 
         const { name, username, email, phone, profession, password } = credentials;
-        const response = await fetch("https://neuus.herokuapp.com/signup", {
+        const response = await fetch("https://nice-lime-coyote-coat.cyclic.app/signup", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
